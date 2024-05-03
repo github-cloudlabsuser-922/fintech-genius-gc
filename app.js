@@ -13,12 +13,12 @@ const iv = Buffer.from('', 'utf8');
 const { check, validationResult } = require('express-validator');
 
 // Set the Azure and AI Search values from environment variables
-const openaiendpoint = process.env["AZURE_OPENAI_ENDPOINT"];
-const azureApiKey = process.env["AZURE_OPENAI_API_KEY"];
-const deploymentId = process.env["AZURE_OPENAI_DEPLOYMENT_ID"];
-const searchEndpoint = process.env["AZURE_AI_SEARCH_ENDPOINT"];
-const searchKey = process.env["AZURE_AI_SEARCH_API_KEY"];
-const searchIndex = process.env["AZURE_AI_SEARCH_INDEX"];
+const openaiendpoint = process.env.AZURE_OPENAI_ENDPOINT;
+const azureApiKey = process.env.AZURE_OPENAI_API_KEY;
+const deploymentId = process.env.AZURE_OPENAI_DEPLOYMENT_ID;
+const searchEndpoint = process.env.AZURE_AI_SEARCH_ENDPOINT;
+const searchKey = process.env.AZURE_AI_SEARCH_API_KEY;
+const searchIndex = process.env.AZURE_AI_SEARCH_INDEX;
 
 const aiClient = new OpenAIClient(openaiendpoint, new AzureKeyCredential(azureApiKey));
 
