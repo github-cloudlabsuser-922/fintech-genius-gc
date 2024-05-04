@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha *.test.js"
+    "run": "node --env-file=.env.production.local app.js"
   },
   "keywords": [],
   "author": "",

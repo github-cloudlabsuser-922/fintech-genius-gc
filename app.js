@@ -28,9 +28,9 @@ app.use(express.json());
 
 // Cosmos DB connection
 const cosmodbendpoint = "https://fintech-credit-card.documents.azure.com:443/";
-const key = "";
+const cosmoDbKey = process.env.COSMO_DB_KEY;
 const { CosmosClient } = cosmos;
-const client = new CosmosClient({ endpoint: cosmodbendpoint, key });
+const client = new CosmosClient({ endpoint: cosmodbendpoint, cosmoDbKey });
 const database = client.database('credit_cards');
 const container = database.container('credit_card_users');
 
